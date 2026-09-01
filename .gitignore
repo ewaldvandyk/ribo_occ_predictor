@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# macOS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Generated test/prediction output
+test/test_output.bedgraph
+*.bedgraph
+*.bg
+
+# Model checkpoints — too large for git, live in Dropbox
+*.pt
