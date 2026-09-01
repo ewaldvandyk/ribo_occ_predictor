@@ -508,6 +508,11 @@ def main(argv: Optional[list[str]] = None) -> int:
         except OSError as exc:
             print(f"ERROR: cannot open output file: {exc}", file=sys.stderr)
             return 1
+    # Provenance/column header as a '#' comment line: tolerated (skipped) by
+    # bedtools/IGV and consistent with the SKIPPED/TRUNCATED marker lines.
+    out.write(f"# predict_ribo_occ_fasta v{__version__} | model={model_path} | "
+              f"window={3 * max_seq_len}nt | columns: transcript_id\tstart_0based\t"
+              f"end_halfopen\toccupancy\n")
     t0 = time.time()
     n_records = n_predicted = n_skipped = total_rows = 0
 

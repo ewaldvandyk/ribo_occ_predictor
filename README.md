@@ -21,6 +21,7 @@ and written as bedGraph with **transcript-relative** coordinates
 (0-based, half-open; the chrom column is the FASTA record ID):
 
 ```
+# predict_ribo_occ_fasta v1.0.0 | model=/path/to/model_500000.pt | window=12000nt | columns: transcript_id	start_0based	end_halfopen	occupancy
 ENST00000616016.5	0	1	0.0123
 ENST00000616016.5	1	2	0.0110
 ENST00000616016.5	2	3	0.4551
